@@ -24,7 +24,7 @@ var React = __importStar(require("react"));
 var react_native_1 = require("react-native");
 var styles_1 = require("./styles");
 exports.ListLetterIndex = function (_a) {
-    var sectionData = _a.sectionData, onPressLetter = _a.onPressLetter, indexContainerStyle = _a.indexContainerStyle, indexLetterStyle = _a.indexLetterStyle, indexLetterContainerStyle = _a.indexLetterContainerStyle, indexLettersContainerStyle = _a.indexLettersContainerStyle, renderCustomIndexLetter = _a.renderCustomIndexLetter;
+    var sectionData = _a.sectionData, onPressLetter = _a.onPressLetter, indexContainerStyle = _a.indexContainerStyle, indexLetterStyle = _a.indexLetterStyle, indexLetterContainerStyle = _a.indexLetterContainerStyle, extraViewStyle = _a.extraViewStyle, indexLettersContainerStyle = _a.indexLettersContainerStyle, renderCustomIndexLetter = _a.renderCustomIndexLetter;
     var onRenderCustomIndexLetter = function (_a) {
         var item = _a.item, index = _a.index;
         var onPress = function () { return onPressLetter(index); };
@@ -42,6 +42,8 @@ exports.ListLetterIndex = function (_a) {
       </react_native_1.TouchableOpacity>);
     };
     return (<react_native_1.View style={[styles_1.styles.letterIndexContainer, indexContainerStyle]}>
+      <react_native_1.View style={extraViewStyle}>
       <react_native_1.FlatList contentContainerStyle={[styles_1.styles.letterIndexList, indexLettersContainerStyle]} data={sectionData} keyExtractor={function (i) { return i.title; }} renderItem={onRenderCustomIndexLetter}/>
+      </react_native_1.View>
     </react_native_1.View>);
 };

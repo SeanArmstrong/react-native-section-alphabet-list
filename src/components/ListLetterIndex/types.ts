@@ -7,5 +7,6 @@ export interface ListLetterIndexProps {
     indexLetterStyle?: AlphabetListProps["indexLetterStyle"],
     indexLetterContainerStyle?: AlphabetListProps["indexLetterContainerStyle"],
     indexLettersContainerStyle?: AlphabetListProps["indexLettersContainerStyle"],
+    extraViewStyle?: AlphabetListProps["extraViewStyle"],
     renderCustomIndexLetter?: AlphabetListProps["renderCustomIndexLetter"],
 }

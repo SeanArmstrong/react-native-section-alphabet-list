@@ -10,6 +10,7 @@ export const ListLetterIndex: React.FC<ListLetterIndexProps> = ({
   indexContainerStyle,
   indexLetterStyle,
   indexLetterContainerStyle,
+  extraViewStyle,
   indexLettersContainerStyle,
   renderCustomIndexLetter,
 }) => {
@@ -35,12 +36,14 @@ export const ListLetterIndex: React.FC<ListLetterIndexProps> = ({
 
   return (
     <View style={[styles.letterIndexContainer, indexContainerStyle]}>
+      <View style={extraViewStyle}>
       <FlatList
         contentContainerStyle={[styles.letterIndexList, indexLettersContainerStyle]}
         data={sectionData}
         keyExtractor={(i) => i.title}
         renderItem={onRenderCustomIndexLetter}
-      />
+        />
+      </View>
     </View>
   )
 }
