@@ -17,6 +17,7 @@ export const AlphabetList: React.FC<AlphabetListProps> = (props) => {
     indexContainerStyle,
     indexLetterStyle,
     indexLetterContainerStyle,
+    indexLettersContainerStyle,
     getItemHeight: onGetItemHeight = () => sizes.itemHeight,
     sectionHeaderHeight = sizes.itemHeight,
     listHeaderHeight = sizes.listHeaderHeight,
@@ -96,6 +97,7 @@ export const AlphabetList: React.FC<AlphabetListProps> = (props) => {
         indexContainerStyle={indexContainerStyle}
         indexLetterStyle={indexLetterStyle}
         indexLetterContainerStyle={indexLetterContainerStyle}
+        indexLettersContainerStyle={indexLettersContainerStyle}
         renderCustomIndexLetter={renderCustomIndexLetter}
       />
     </View>

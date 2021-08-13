@@ -45,6 +45,3 @@ buck-out/
 #
 .vscode
 
-# Build
-#
-dist
